@@ -1,0 +1,42 @@
+config MTK_LEDS
+	tristate "MediaTek LED Support"
+	depends on LEDS_CLASS
+	---help---
+	  This selects the MediaTek(R) LEDs connected to MediaTek chips.
+	  If you want to use MediaTek(R) LEDs support, say Y or M here.
+	  If unsure, say N.
+	  Mediatek LED module includes backlight, indicate LED, keypad LED, button LED etc.
+
+config LIGHTNESS_MAPPING_VALUE
+	int "LIGHTNESS_MAPPING_VALUE"
+	default 255
+ 	---help---
+	  Backlight brightness mapping value, from 0 to 255.
+
+config BACKLIGHT_SUPPORT_LP8557
+	bool "Support backlight lp8557 board"
+
+config BACKLIGHT_SUPPORT_LM3697
+	bool "LM3697(DW8832) Support"
+	default n
+ 	---help---
+	  charge pump driver for external backlight
+
+config NUBIA_PMIC_LEDS
+	bool "nubia pmic isink leds"
+	default n
+
+config NUBIA_PMIC_LEDS_NX573J
+	bool "nubia pmic isink leds NX573J"
+	default n
+
+config NUBIA_PMIC_LEDS_NX575J
+	bool "nubia pmic isink leds NX575J"
+	default n
+
+config ZTEMT_BREATH_LED_AW2013
+        tristate "aw2013 i2c led"
+        depends on I2C
+        default n
+        help
+         xiaofeng-breathled you say use aw2013, select it.

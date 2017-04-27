@@ -1,0 +1,17 @@
+
+config MTK_TMD2725X_NEW
+	bool "TMD2725X_NEW for MediaTek package"
+	default n
+	help
+	It support different type sensor
+	in this platform. If this option
+	is set, it will support ambient
+	and light sensor TMD2725X.
+
+config NUBIA_TMD2725X_NEW_ALS_CONT_VALUE
+	bool "Enable TMD2725X_NEW als continuous value"
+       default n
+
+config CUSTOM_KERNEL_ALSPS_NX575
+	bool "Change OTHER GPIO AND LOD"
+       default n
